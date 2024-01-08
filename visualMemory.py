@@ -25,7 +25,7 @@ except Exception:
 
 try:
     while True:
-        squares = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.active")))
+        squares = WebDriverWait(driver, 2).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.active")))
         time.sleep(2.5)
         for square in squares:
             square.click()
